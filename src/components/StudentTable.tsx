@@ -99,7 +99,7 @@ const Table: React.FC<{ students: Student[] }> = ({ students }): JSX.Element => 
                         {data.map((student, i) => (
                             <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700" key={i}>
                                 <td className="px-3 py-3">
-                                    <Avatar height={12} width={12} img={student.details.user_img} />
+                                    <Avatar height={5} width={5} img={student.details.user_img} />
                                 </td>
                                 <td>
                                     <Link className="text-blue-200 underline" href={`/${student.details.user_id}`}>

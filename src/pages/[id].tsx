@@ -52,7 +52,10 @@ const Profile = () => {
                     <div className="flex flex-col items-center justify-center space-y-3 bg-gray-700 mt-6 rounded-lg p-5">
                         <Avatar img={student.details.user_img} height={100} width={100} />
                         <div className="text-gray-200 text-sm">
-                            Name: <span className="text-white font-semibold">{student.name}</span>
+                            Name:{" "}
+                            <span className="text-white font-semibold">
+                                {student.name} {student.nickname.length > 0 && <>({student.nickname})</>}
+                            </span>
                         </div>
                         <div className="text-gray-200 text-sm">
                             Major: <span className="text-white font-semibold">{student.current_major}</span>
