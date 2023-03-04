@@ -1,18 +1,36 @@
+export type StudentStatus = {
+    date: string;
+    type: number;
+};
+
+export type Profile = {
+    id: number,
+    user_id: string;
+    user_img: string | null;
+    major: string;
+    year: string;
+    status: StudentStatus[];
+};
 
 export interface Student {
+    email: string;
     id: number;
     name: string;
+    nickname: string;
     phone: string;
-    email: string;
-}
+    current_major: string;
+    recent_status: string;
+    details: Profile;
+};
 
 export interface Course {
-    id: number;
-    user_id: number,
-    course_selection: string;
+    course_fee: number;
     course_name: string;
-    semester: string;
-    semester_fee: number;
+    course_selection: string;
+    id: number;
+    semester_code: string;
+    user_id: string,
 }
+
 
 export type StudentCourse = Student & Course;

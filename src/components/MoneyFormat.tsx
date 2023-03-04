@@ -4,7 +4,9 @@ import React, { memo, useEffect, useMemo, useState } from "react";
 const MoneyFormat: React.FC<{ base: string; target: string; amount: number }> = ({ base, target, amount }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [convertedAmount, setConvertedAmount] = useState(amount);
-    const formatter = useMemo(() => new Intl.NumberFormat("en-US", { style: "currency", currency: target }), [target]);
+    const formatter = useMemo(() => {
+        return new Intl.NumberFormat("en-US", { style: "currency", currency: target });
+    }, [target]);
 
     useEffect(() => {
         setIsLoading(true);
